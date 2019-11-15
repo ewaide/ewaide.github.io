@@ -25,7 +25,7 @@
     version: '7.5.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":null},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
@@ -51,14 +51,14 @@
   };
 </script>
 
-  <meta name="description" content="查看端口 hexo上查看 1netstat -ant |grep 4000 改博客端口号hexo的_config.yml上加 1234server:  port: 4001  compress: true  header: true 如何查看端口被占用、杀进程系统当前所有的端口使用情况 1netstat -ano  查找某一特定端口netstat -ano |findstr “端口号”如： 123">
+  <meta name="description" content="查看端口 hexo上查看 1netstat -ant |grep 4000 改博客端口号hexo的_config.yml上加 1234server:  port: 4001  compress: true  header: true  &amp;lt; !– more – &amp;gt; 如何查看端口被占用、杀进程系统当前所有的端口使用情况 1netstat -ano  查找某一特定端口netstat -ano">
 <meta property="og:type" content="article">
 <meta property="og:title" content="端口被占用">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;a&#x2F;index.html">
 <meta property="og:site_name" content="blog1">
-<meta property="og:description" content="查看端口 hexo上查看 1netstat -ant |grep 4000 改博客端口号hexo的_config.yml上加 1234server:  port: 4001  compress: true  header: true 如何查看端口被占用、杀进程系统当前所有的端口使用情况 1netstat -ano  查找某一特定端口netstat -ano |findstr “端口号”如： 123">
+<meta property="og:description" content="查看端口 hexo上查看 1netstat -ant |grep 4000 改博客端口号hexo的_config.yml上加 1234server:  port: 4001  compress: true  header: true  &amp;lt; !– more – &amp;gt; 如何查看端口被占用、杀进程系统当前所有的端口使用情况 1netstat -ano  查找某一特定端口netstat -ano">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-15T06:10:05.726Z">
+<meta property="og:updated_time" content="2019-11-15T12:04:43.995Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/14/a/">
@@ -192,7 +192,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/14/a/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar1.jpg">
       <meta itemprop="name" content="yu">
       <meta itemprop="description" content="">
     </span>
@@ -219,7 +219,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-15 14:10:05" itemprop="dateModified" datetime="2019-11-15T14:10:05+08:00">2019-11-15</time>
+                <time title="修改时间：2019-11-15 20:04:43" itemprop="dateModified" datetime="2019-11-15T20:04:43+08:00">2019-11-15</time>
               </span>
 
           
@@ -232,12 +232,17 @@
     
     <div class="post-body" itemprop="articleBody">
 
+
+
+
       
         <h1 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h1><hr>
 <p>hexo上查看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ant |grep 4000</span><br></pre></td></tr></table></figure>
 <h1 id="改博客端口号"><a href="#改博客端口号" class="headerlink" title="改博客端口号"></a>改博客端口号</h1><p>hexo的_config.yml上加</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 4001</span><br><span class="line">  compress: <span class="literal">true</span></span><br><span class="line">  header: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>&lt; !– more – &gt;</p>
 <h1 id="如何查看端口被占用、杀进程"><a href="#如何查看端口被占用、杀进程" class="headerlink" title="如何查看端口被占用、杀进程"></a>如何查看端口被占用、杀进程</h1><p>系统当前所有的端口使用情况</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
 
@@ -325,6 +330,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yu"
+      src="/images/avatar1.jpg">
   <p class="site-author-name" itemprop="name">yu</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -370,11 +377,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">yu</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
-  </div>
 
         
 
@@ -427,9 +429,7 @@
 
   
 
-<--!
 
--->
 
 </body>
 </html>
