@@ -51,12 +51,12 @@
   };
 </script>
 
-  <meta name="description" content="查看端口hexo上查看1netstat -ant |grep 4000改博客端口号hexo的_config.yml上加">
+  <meta name="description" content="查看端口hexo上查看1netstat -ant |grep 4000改博客端口号hexo的_config.yml上加1234server:  port: 4001  compress: true  header: true如何查看端口被占用、杀进程系统当前所有的端口使用情况1netstat -ano">
 <meta property="og:type" content="article">
 <meta property="og:title" content="端口被占用">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;a&#x2F;index.html">
 <meta property="og:site_name" content="blog1">
-<meta property="og:description" content="查看端口hexo上查看1netstat -ant |grep 4000改博客端口号hexo的_config.yml上加">
+<meta property="og:description" content="查看端口hexo上查看1netstat -ant |grep 4000改博客端口号hexo的_config.yml上加1234server:  port: 4001  compress: true  header: true如何查看端口被占用、杀进程系统当前所有的端口使用情况1netstat -ano">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-15T13:39:19.957Z">
 <meta name="twitter:card" content="summary">
@@ -257,16 +257,16 @@
 
 
       
-        <h1 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h1><hr><p>hexo上查看</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ant |grep 4000</span><br></pre></td></tr></table></figure><h1 id="改博客端口号"><a href="#改博客端口号" class="headerlink" title="改博客端口号"></a>改博客端口号</h1><p>hexo的_config.yml上加</p><a id="more"></a>
+        <h1 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h1><hr><p>hexo上查看</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ant |grep 4000</span><br></pre></td></tr></table></figure><h1 id="改博客端口号"><a href="#改博客端口号" class="headerlink" title="改博客端口号"></a>改博客端口号</h1><p>hexo的_config.yml上加</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 4001</span><br><span class="line">  compress: <span class="literal">true</span></span><br><span class="line">  header: <span class="literal">true</span></span><br></pre></td></tr></table></figure><h1 id="如何查看端口被占用、杀进程"><a href="#如何查看端口被占用、杀进程" class="headerlink" title="如何查看端口被占用、杀进程"></a>如何查看端口被占用、杀进程</h1><p>系统当前所有的端口使用情况</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure><a id="more"></a>
 
 
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 4001</span><br><span class="line">  compress: <span class="literal">true</span></span><br><span class="line">  header: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h1 id="如何查看端口被占用、杀进程"><a href="#如何查看端口被占用、杀进程" class="headerlink" title="如何查看端口被占用、杀进程"></a>如何查看端口被占用、杀进程</h1><p>系统当前所有的端口使用情况</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
+
+
+
 
 <p>查找某一特定端口<br>netstat -ano |findstr “端口号”<br>如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano |findstr <span class="string">"4000"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Users\excited&gt;netstat -ano |findstr <span class="string">"4000"</span></span><br><span class="line">  TCP    0.0.0.0:4000           0.0.0.0:0              LISTENING       19920</span><br><span class="line">  TCP    [::]:4000              [::]:0                 LISTENING       19920</span><br></pre></td></tr></table></figure>
