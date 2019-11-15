@@ -211,7 +211,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-11-15 13:57:15 / 修改时间：21:17:51" itemprop="dateCreated datePublished" datetime="2019-11-15T13:57:15+08:00">2019-11-15</time>
+              <time title="创建时间：2019-11-15 13:57:15 / 修改时间：21:28:54" itemprop="dateCreated datePublished" datetime="2019-11-15T13:57:15+08:00">2019-11-15</time>
             </span>
 
           <br>
@@ -243,9 +243,14 @@
 
       
           <h2 id="虚拟键盘"><a href="#虚拟键盘" class="headerlink" title="虚拟键盘"></a>虚拟键盘</h2><p>运行中（win键+R）输入osk调出windows7自带的虚拟键盘，在虚拟键盘中有pause键**</p>
-<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p><img src="%5Cimage%5Cwechatpay.png" alt="ha" title="haha"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/15/b/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -295,7 +300,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-15 20:04:43" itemprop="dateModified" datetime="2019-11-15T20:04:43+08:00">2019-11-15</time>
+                <time title="修改时间：2019-11-15 21:39:19" itemprop="dateModified" datetime="2019-11-15T21:39:19+08:00">2019-11-15</time>
               </span>
 
           <br>
@@ -304,7 +309,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>838</span>
+              <span>823</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -326,33 +331,15 @@
 
 
       
-          <h1 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h1><hr>
-<p>hexo上查看</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ant |grep 4000</span><br></pre></td></tr></table></figure>
-<h1 id="改博客端口号"><a href="#改博客端口号" class="headerlink" title="改博客端口号"></a>改博客端口号</h1><p>hexo的_config.yml上加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 4001</span><br><span class="line">  compress: <span class="literal">true</span></span><br><span class="line">  header: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>&lt; !– more – &gt;</p>
-<h1 id="如何查看端口被占用、杀进程"><a href="#如何查看端口被占用、杀进程" class="headerlink" title="如何查看端口被占用、杀进程"></a>如何查看端口被占用、杀进程</h1><p>系统当前所有的端口使用情况</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
-
-<p>查找某一特定端口<br>netstat -ano |findstr “端口号”<br>如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano |findstr <span class="string">"4000"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Users\excited&gt;netstat -ano |findstr <span class="string">"4000"</span></span><br><span class="line">  TCP    0.0.0.0:4000           0.0.0.0:0              LISTENING       19920</span><br><span class="line">  TCP    [::]:4000              [::]:0                 LISTENING       19920</span><br></pre></td></tr></table></figure>
-
-<p>通过id查找对应的进程名称<br>tasklist |findstr “进程id号”<br>如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tasklist |findstr <span class="string">"19920"</span></span><br><span class="line"></span><br><span class="line">C:\Users\excited&gt;tasklist |findstr <span class="string">"19920"</span></span><br><span class="line">node.exe                     19920 Console                    5     44,692 K</span><br></pre></td></tr></table></figure>
-
-<p>杀掉进程(注意貌似在cmd上用命令才有效)<br>taskkill /f /t /im “进程id或者进程名称”<br>如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /f /t /im <span class="string">"19920"</span></span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /f /t /im <span class="string">"node.exe"</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>不同进程id号对应的进程名称可能相同</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\excited&gt;tasklist |findstr <span class="string">"19920"</span></span><br><span class="line">node.exe                     19920 Console                    5     44,692 K</span><br><span class="line"></span><br><span class="line">C:\Users\excited&gt;tasklist |findstr <span class="string">"25200"</span></span><br><span class="line">node.exe                     25200 Console                    5     58,532 K</span><br></pre></td></tr></table></figure>
-
-<p>GitBash 中按下 Ctrl+C 无法中断 webpack-dev-server<br>解决办法：</p>
-<p>打开 cmd<br>复制 taskkill /F /IM node.exe 然后粘贴运行<br>搞定<br>这是 GitBash 的一个 BUG，不知何时修复。</p>
-
+          <h1 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h1><hr><p>hexo上查看</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ant |grep 4000</span><br></pre></td></tr></table></figure><h1 id="改博客端口号"><a href="#改博客端口号" class="headerlink" title="改博客端口号"></a>改博客端口号</h1><p>hexo的_config.yml上加</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/14/a/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -427,19 +414,14 @@
 
       
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/14/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
