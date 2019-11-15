@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="https://www.w3.org/2005/Atom">
+  <title>blog1</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-11-15T07:06:35.566Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>yu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>b</title>
+    <link href="http://yoursite.com/2019/11/15/b/"/>
+    <id>http://yoursite.com/2019/11/15/b/</id>
+    <published>2019-11-15T05:57:15.000Z</published>
+    <updated>2019-11-15T07:06:35.566Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="虚拟键盘"><a href="#虚拟键盘" class="headerlink" title="虚拟键盘"></a>虚拟键盘</h2><p>运行中（win键+R）输入osk调出windows7自带的虚拟键盘，在虚拟键盘中有pause键</p><h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;虚拟键盘&quot;&gt;&lt;a href=&quot;#虚拟键盘&quot; class=&quot;headerlink&quot; title=&quot;虚拟键盘&quot;&gt;&lt;/a&gt;虚拟键盘&lt;/h2&gt;&lt;p&gt;运行中（win键+R）输入osk调出windows7自带的虚拟键盘，在虚拟键盘中有pause键&lt;/p&gt;
+&lt;h2 id=&quot;上传
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>端口被占用</title>
+    <link href="http://yoursite.com/2019/11/14/a/"/>
+    <id>http://yoursite.com/2019/11/14/a/</id>
+    <published>2019-11-14T12:53:16.000Z</published>
+    <updated>2019-11-15T12:04:43.995Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h1><hr><p>hexo上查看</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ant |grep 4000</span><br></pre></td></tr></table></figure><h1 id="改博客端口号"><a href="#改博客端口号" class="headerlink" title="改博客端口号"></a>改博客端口号</h1><p>hexo的_config.yml上加</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 4001</span><br><span class="line">  compress: <span class="literal">true</span></span><br><span class="line">  header: <span class="literal">true</span></span><br></pre></td></tr></table></figure><p>&lt; !– more – &gt;</p><h1 id="如何查看端口被占用、杀进程"><a href="#如何查看端口被占用、杀进程" class="headerlink" title="如何查看端口被占用、杀进程"></a>如何查看端口被占用、杀进程</h1><p>系统当前所有的端口使用情况</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure><p>查找某一特定端口<br>netstat -ano |findstr “端口号”<br>如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano |findstr <span class="string">"4000"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Users\excited&gt;netstat -ano |findstr <span class="string">"4000"</span></span><br><span class="line">  TCP    0.0.0.0:4000           0.0.0.0:0              LISTENING       19920</span><br><span class="line">  TCP    [::]:4000              [::]:0                 LISTENING       19920</span><br></pre></td></tr></table></figure><p>通过id查找对应的进程名称<br>tasklist |findstr “进程id号”<br>如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tasklist |findstr <span class="string">"19920"</span></span><br><span class="line"></span><br><span class="line">C:\Users\excited&gt;tasklist |findstr <span class="string">"19920"</span></span><br><span class="line">node.exe                     19920 Console                    5     44,692 K</span><br></pre></td></tr></table></figure><p>杀掉进程(注意貌似在cmd上用命令才有效)<br>taskkill /f /t /im “进程id或者进程名称”<br>如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /f /t /im <span class="string">"19920"</span></span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /f /t /im <span class="string">"node.exe"</span></span><br></pre></td></tr></table></figure><h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>不同进程id号对应的进程名称可能相同</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\excited&gt;tasklist |findstr <span class="string">"19920"</span></span><br><span class="line">node.exe                     19920 Console                    5     44,692 K</span><br><span class="line"></span><br><span class="line">C:\Users\excited&gt;tasklist |findstr <span class="string">"25200"</span></span><br><span class="line">node.exe                     25200 Console                    5     58,532 K</span><br></pre></td></tr></table></figure><p>GitBash 中按下 Ctrl+C 无法中断 webpack-dev-server<br>解决办法：</p><p>打开 cmd<br>复制 taskkill /F /IM node.exe 然后粘贴运行<br>搞定<br>这是 GitBash 的一个 BUG，不知何时修复。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;查看端口&quot;&gt;&lt;a href=&quot;#查看端口&quot; class=&quot;headerlink&quot; title=&quot;查看端口&quot;&gt;&lt;/a&gt;查看端口&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;hexo上查看&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/11/14/hello-world/"/>
+    <id>http://yoursite.com/2019/11/14/hello-world/</id>
+    <published>2019-11-14T11:57:06.911Z</published>
+    <updated>2019-11-14T11:57:06.912Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
